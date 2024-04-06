@@ -1,4 +1,4 @@
-package org.example;
+package com.ocado.basket;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -46,11 +46,10 @@ public class BasketSplitter {
 
         // Assigning items to delivery option by the most common delivery options
         for (String item : basketItems) {
-            List<String> deliveryOptionsForItem = deliveryOptions.get(item);
 
             for (Map.Entry<String, Integer> entry : sortedDeliveryUsages) {
                 String option = entry.getKey();
-                if (deliveryOptionsForItem.contains(option)) {
+                if (deliveryOptions.get(item).contains(option)) {
                     if (!delivery.containsKey(option)) {
                         delivery.put(option, new ArrayList<>());
                     }

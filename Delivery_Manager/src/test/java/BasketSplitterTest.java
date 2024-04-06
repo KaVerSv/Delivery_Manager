@@ -1,6 +1,6 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.BasketSplitter;
+import com.ocado.basket.BasketSplitter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,6 @@ import java.util.*;
 public class BasketSplitterTest {
 
     private BasketSplitter basketSplitter;
-
     @BeforeEach
     public void setUp() {
         basketSplitter = new BasketSplitter("F:\\GitHub\\Delivery_Manager\\Delivery_Manager\\src\\test\\java\\config.json");
