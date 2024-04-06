@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="Delivery_Manager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Delivery_Manager_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Delivery_Manager.jar">
+        <element id="module-output" name="Delivery_Manager" />
+      </element>
+      <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.14.9" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.17.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.17.0" />
+    </root>
+  </artifact>
+</component>
