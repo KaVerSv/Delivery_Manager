@@ -25,14 +25,14 @@ public class BasketSplitter {
         Map<String, List<String>> delivery = new HashMap<>();
         Map<String, Integer> deliverOptionUsages = new HashMap<>();
 
-        // możliwe opcje dostaw
+        // possible delivery options
         for (List<String> options : deliveryOptions.values()) {
             for (String option : options) {
                 deliverOptionUsages.put(option, 0);
             }
         }
 
-        // przypisanie przedmiotu do możliwych opcji dostwy
+        // assigning the item to possible delivery options
         for (String item : basketItems) {
             List<String> deliveryOptionsForItem = deliveryOptions.get(item);
             for (String option : deliveryOptionsForItem) {
@@ -40,11 +40,11 @@ public class BasketSplitter {
             }
         }
 
-        // Posortowanie zamówień względem ilości wspólnych opcji dostaw
+        // Sort orders by the most common delivery options
         List<Map.Entry<String, Integer>> sortedDeliveryUsages = new ArrayList<>(deliverOptionUsages.entrySet());
         sortedDeliveryUsages.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
-        // Przypisanie przedmiotów do opcji dostawy względem najczęstrzej opcji dostawy
+        // Assigning items to delivery option by the most common delivery options
         for (String item : basketItems) {
             List<String> deliveryOptionsForItem = deliveryOptions.get(item);
 
