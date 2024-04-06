@@ -20,6 +20,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <descriptorRefs>jar-with-dependencies</descriptorRefs>
+                    <finalName>DeliveryManager</finalName>
                 </configuration>
             </plugin>
         </plugins>
